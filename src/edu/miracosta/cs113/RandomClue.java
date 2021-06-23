@@ -22,7 +22,7 @@ import model.AssistantJack;
 
 public class RandomClue {
 
-    /*
+    /* changed
      * ALGORITHM:
      *
      * PROMPT "Which theory to test? (1, 2, 3[random]): "
