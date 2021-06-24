@@ -1,28 +1,32 @@
 package edu.miracosta.cs113;
 
 /**
- * RandomClue.java : Your job is to ask your AssistantJack and get the correct
+ * RandomClue.java : Ask the AssistantJack object and get the correct
  * answer in <= 20 tries.  RandomClue is ONE solution to the problem,
- * where a set of random numbers is generated every attempt until all three
- * random numbers match the solution from the AssistantJack object.
+ * where arrays are used for persons, weapons, and locations. If 
+ * AssistantJack says that the person/weapon/location is incorrect, 
+ * then the array location for the the person/weapon/location has a 
+ * value of 99 for incorrect. Using this logic and randomly generated 
+ * numbers, AssistantJack is called until there is a match to the solution 
+ * from the AssistantJack object.
  *
- * This is a sample solution, a driver using random number implementation.
- * You can use this file as a guide to create your own SEPARATE driver for
- * your implementation that can solve it in <= 20 times consistently.
+ * 
  *
- * @author Nery Chapeton-Lamas (material from Kevin Lewis)
+ * @author Haaris Alam
  * @version 1.0
  *
  */
 
 import java.util.Random;
 import java.util.Scanner;
+
 import model.Theory;
 import model.AssistantJack;
 
 public class RandomClue {
 
-    /* ALGORITHM:
+    /*
+     * ALGORITHM:
      *
      * PROMPT "Which theory to test? (1, 2, 3[random]): "
      * READ answerSet
@@ -49,26 +53,63 @@ public class RandomClue {
      */
     public static void main(String[] args) {
         // DECLARATION + INITIALIZATION
-        int answerSet, solution, murder, weapon, location;
+        int[] murderers = new int[6];
+        int[] locations = new int[10];
+        int[] weapons = new int[6];
+
+        int answerSet, solution;
+        int murder = 1;
+        int weapon = 1;
+        int location = 1;
         Theory answer;
         AssistantJack jack;
         Scanner keyboard = new Scanner(System.in);
         Random random = new Random();
+        int status = 0;
 
         // INPUT
-        System.out.print("Which theory would like you like to test? (1, 2, 3[random]): ");
+       System.out.print("Which theory would like you like to test? (1, 2, 3[random]): ");
         answerSet = keyboard.nextInt();
-        keyboard.close();
+       keyboard.close();
 
         // PROCESSING
         jack = new AssistantJack(answerSet);
 
         do {
-            weapon = random.nextInt(6) + 1;
-            location = random.nextInt(10) + 1;
-            murder = random.nextInt(6) + 1;
+            for (int i = 0; i < 6; i++) {
+                status = weapons[i];
+                if (status == 0) {
+                    weapon = i + 1;
+                    i = 6;
+                }
+            } 
+            
+            for (int i = 0; i < 6; i++) {
+                status = murderers[i];
+                if (status == 0) {
+                    murder = i +1;
+                    i = 6;
+                }
+            } 
+            
+            for (int i = 0; i < 10; i++) {
+                status = locations[i];
+                if (status == 0) {
+                    location = i +1;
+                    i = 10;
+                }
+            } 
+
             solution = jack.checkAnswer(weapon, location, murder);
+            if (solution == 1) {
+                weapons[weapon - 1] = 99;
+            } else if (solution == 2) {
+                locations[location - 1] = 99;
+            } else if (solution == 3) {
+                murderers[murder - 1] = 99;
+            }
         } while (solution != 0);
+
 
         answer = new Theory(weapon, location, murder);
 
