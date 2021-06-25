@@ -15,7 +15,7 @@ RandomClue Algorithm Questions and Answers
 
 When testing each theory twenty times each, the below results were obtained.
         ◦ Theory 1 takes takes more than 20 checks - 100% of the time 
-        ◦ Theory 2 takes more than 20 checks -    96% of the time
+        ◦ Theory 2 takes more than 20 checks -    95% of the time
         ◦ Theory 3 takes more than 20 checks - 100% of the time
 
     • What is good or bad about this strategy?
