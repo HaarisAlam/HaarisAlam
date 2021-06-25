@@ -19,4 +19,4 @@ When testing each theory twenty times each, the below results were obtained.
         ◦ Theory 3 takes more than 20 checks - 100% of the time
 
     • What is good or bad about this strategy?
-        ◦ This strategy is bad because it is based on pure guessing. It keeps on randomly generated guesses for the answer set. However, after each guess is formulated and checked, the algorithm does not remove incorrect choices like the MyClue algorithm,. This results in more than 20 checks required to arrive at the correct answer set, only rarely being lower than that (which occurs by luck) for any of the theories using this algorithm.
+        ◦ This strategy is bad because it is based on pure guessing. It keeps on randomly generated guesses for the answer set. However, after each guess is formulated and checked, the algorithm does not remove incorrect choices like the MyClue algorithm. This results in more than 20 checks required to arrive at the correct answer set. Only rarely is it lower than that (which occurs by luck) for any of the theories using this algorithm.
