@@ -1,0 +1,27 @@
+﻿    • MyClue Algorithm Questions and Answers 
+    • 
+    • How often do you get a solution in fewer than 20 guesses? Does this change depending on the theory you test (1, 2, 3)?
+
+When testing each theory twenty-five times each, the below results were obtained.
+        ◦ Theory 1 takes 1 check - 100% of the time 
+        ◦ Theory 2 takes 20 checks -    100% of the time
+        ◦ Theory 3 varies in the # of checks, but is always less than 20 - 100% of the time
+
+
+    • What is good or bad about this strategy?
+        ◦ This strategy is good because it is more efficient than pure guessing. It still uses random number generation to formulate the initial “guess”, instead of going through al the possible permutations of the answer set. However, after each guess is formulated and checked, the algorithm removes incorrect choices from the possible combination. This reduces the number of checks required. In contrast, plain guessing results in a choice guessed incorrectly multiple times.
+
+
+    • RandomClue Algorithm Questions and Answers 
+    • 
+    • How often do you get a solution in fewer than 20 guesses? Does this change depending on the theory you test (1, 2, 3)?
+
+When testing each theory twenty-five times each, the below results were obtained.
+        ◦ Theory 1 takes takes more than 20 checks - 100% of the time 
+        ◦ Theory 2 takes more than 20 checks -    96% of the time
+        ◦ Theory 3 takes more than 20 checks - 100% of the time
+
+
+    • What is good or bad about this strategy?
+        ◦ This strategy is bad because it is based on pure guessing. It goes through all the possible permutations of the answer set until it finds the correct combination. However, after each guess is formulated and checked, the algorithm does not remove incorrect choices like MyClue. This results in more than 20 checks required, only rarely being lower than that (which occurs by luck) for any of the theories using this algorithm.
+
