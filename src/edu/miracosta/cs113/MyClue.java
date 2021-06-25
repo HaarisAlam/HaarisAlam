@@ -34,15 +34,17 @@ public class MyClue {
      * 
      * DO
      *      Parse through possible weapon options from 1 through 6
-     *      If correct, assign weapon number and exit loop.
+     *      If possible, assign weapon number and exit loop.
      *     
      *      Parse through possible location options from 1 through 10
-     *      If correct, assign location number and exit loop.
+     *      If possible, assign location number and exit loop.
      *      
      *      Parse through possible murderer options from 1 through 6
-     *      If correct, assign murder number and exit loop.
+     *      If possible, assign murder number and exit loop.
      *      
-     *      solution = jack.checkAnswer(weapon, location, murder)
+     *      solution = jack.checkAnswer(weapon, location, murder) 
+     *      If incorrect, assign value of 99 to mark the choice incorrect.	
+     *      
      * WHILE solution != 0
      *
      * OUTPUT "Total Checks = " + jack.getTimesAsked() + ", Solution " + answer
