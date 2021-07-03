@@ -28,21 +28,24 @@ Write a program that compares the values of y1 and y2 in the following expressio
 	y1 = 100 * n + 10
 	y2 = 5 * n * n + 2
 –Print in a formatted table (no need to add lines, just use printf)
-
+System.out.println("Value of y1     Value of y2    Comparison of y1 and y2");
 for (int i = n; i <= 100; i += 10)
 	{
 		y1 = 100 * n + 10;
 		y2 = 5 * n * n + 2;
 		
+		System.out.print(y1+"          ");
+		System.out.print(y2+"          ");
+		
 		boolean yOneGreater == y1 > y2;
 		boolean yTwoGreater == y2 > y1;
 		
-		
 		if (yOneGreater == true)
-			System.out.println("y1 is greater than y2");
+			System.out.print("y1 is greater than y2");
 		else if (yTwoGreater == true
-			System.out.println("y2 is greater than y1");
+			System.out.print("y2 is greater than y1");
 		else 
-			System.out.println("y1 is equal to y2");
+			System.out.print("y1 is equal to y2");
+		System.out.println();
 	}
 	
