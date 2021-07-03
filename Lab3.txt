@@ -19,7 +19,7 @@ Self-Check #1
 		for (int j = 0; j < i; j++)
 			if (j % i == 0)
 				System.out.println(i + " " + j); 
-	Answer: n^2; O(n^2)					
+	Answer: n-1; O(n)					
 						
 
 
